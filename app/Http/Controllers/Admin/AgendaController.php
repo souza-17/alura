@@ -21,13 +21,16 @@ class AgendaController extends Controller
     public function index()
     {
 
+        $user = Auth::user();
+
         $agendas = DB::table('agendas')
                         ->join('users', 'users.id', '=', 'agendas.user_id')
                         ->join('pacientes', 'pacientes.id', '=', 'agendas.paciente_id')
                         ->select('agendas.*', 'users.name as usuario', 'pacientes.nome as paciente')
+                        ->where('users.id', $user->id)
                         ->get();
 
-        $user = Auth::user();
+        
         $registros = Agenda::with('pacientes');
         $caminhos = [
             ['url'=>'/admin','titulo'=>'Admin'],

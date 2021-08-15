@@ -40,7 +40,6 @@
             <div class="col s12">
               <br/>
               <button class="btn green">Entrar</button>
-              <a href="{{ url('/password/reset') }}"  class="btn orange">Recuperar senha</a>
             </div>
           </form>
       </div>

@@ -12,11 +12,11 @@
 		<option value="">Selecione Paciente</option>
 		@foreach($pacientes as $paciente)
 		<option value="{{$paciente->id}}" 
-		
-		@if ($paciente->id == $registro->paciente_id)
-			selected="selected"
+		@if (isset($registro->paciente_id))
+			@if ($paciente->id == $registro->paciente_id)
+				selected="selected"
+			@endif
 		@endif
-
 		>{{$paciente->nome}}</option>
 		@endforeach
 	</select>
