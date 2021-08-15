@@ -11,15 +11,15 @@ REGRA DE NEGOCIO
 	- senha
 
 - modulo de paciente (CRUD) - ACESSO GERAL A TODOS OS USUARIOS
-	-id
-	-nome
-	-cpf
+	- id
+	- nome
+	- cpf
 
--modulo de Prontuario (CRUD) - SÓ TEM ACESSO A DADOS REALIZADOS PELO O USUARIO
-	-vinculo com medico
-	-vinculo com um paciente
-	-titulo
-	-descricao
+- modulo de Prontuario (CRUD) - SÓ TEM ACESSO A DADOS REALIZADOS PELO O USUARIO
+	- vinculo com medico
+	- vinculo com um paciente
+	- titulo
+	- descricao
 
 - app/Paciente.php - model classes, agenda.php - model classes, user.php - model classes
 - app/http/controller - controllers da aplicação
